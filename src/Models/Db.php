@@ -6,7 +6,7 @@ use \PDO;
 
 class DB
 {
-    private $host = 'localhost';
+    private $host = 'pbkcadersindia.in';
     private $user = 'u256988789_cadersindia';
     private $pass = 'C@dersIndi@!!2023';
     private $dbname = 'u256988789_cadersindia';
