@@ -14,6 +14,7 @@ $app->addRoutingMiddleware();
 $app->addBodyParsingMiddleware();
 $app->add(new BasePathMiddleware($app));
 $app->addErrorMiddleware(true, true, true);
+//$app->setBasePath("/public/index.php");
 
 $app->get('/', function (Request $request, Response $response) {
     $response->getBody()->write('Hello World!');
@@ -60,7 +61,7 @@ $app->delete('/user-form/{id}', function ($request, $response, array $args) {
 $app->get('/user-form/all', function (Request $request, Response $response) {
     $sql = "SELECT * FROM userform";
     $q_param = $request->getQueryParams();
-    if($q_param["district"] && $q_param["district"] != ""){
+    if($q_param && $q_param["district"] && $q_param["district"] != ""){
         $sql = "SELECT * FROM userform where district='".$q_param["district"]."'";
     }
     try {

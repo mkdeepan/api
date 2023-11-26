@@ -7,9 +7,9 @@ use \PDO;
 class DB
 {
     private $host = 'localhost';
-    private $user = 'root';
-    private $pass = '';
-    private $dbname = 'cadersindia';
+    private $user = 'u256988789_cadersindia';
+    private $pass = 'C@dersIndi@!!2023';
+    private $dbname = 'u256988789_cadersindia';
 
     public function connect()
     {
