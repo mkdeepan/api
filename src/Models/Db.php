@@ -4,9 +4,9 @@ namespace App\Models;
 
 use \PDO;
 
-class DB
+class Db
 {
-    private $host = 'pbkcadersindia.in';
+    private $host = 'localhost';
     private $user = 'u256988789_cadersindia';
     private $pass = 'C@dersIndi@!!2023';
     private $dbname = 'u256988789_cadersindia';

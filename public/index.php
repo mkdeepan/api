@@ -4,7 +4,7 @@ use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Selective\BasePath\BasePathMiddleware;
 use Slim\Factory\AppFactory;
-use App\Models\DB;
+use App\Models\Db;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -14,7 +14,6 @@ $app->addRoutingMiddleware();
 $app->addBodyParsingMiddleware();
 $app->add(new BasePathMiddleware($app));
 $app->addErrorMiddleware(true, true, true);
-//$app->setBasePath("/public/index.php");
 
 $app->get('/', function (Request $request, Response $response) {
     $response->getBody()->write('Hello World!');
